@@ -13,12 +13,17 @@ function CacherMemJS(host, opts) {
 }
 
 CacherMemJS.prototype.get = function(key, cb) {
-  this.client.get(key, cb);
+  // Since memjs uses SlowBuffer, we need to parse value to Object.
+  var callback = function(err, val, extras) {
+    var value = val !== null ? JSON.parse(val) : '';
+    cb(err, value);
+  };
+  this.client.get(key, callback);
 }
 
 CacherMemJS.prototype.set = function(key, cacheObject, ttl, cb) {
   cb = cb || function() {};
-  this.client.set(key, cacheObject, ttl, cb);
+  this.client.set(key, JSON.stringify(cacheObject), cb, ttl);
 }
 
 CacherMemJS.prototype.invalidate = function(key, cb) {
