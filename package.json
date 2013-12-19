@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "cacher": "1.0.1",
-    "memjs": "2.5.2"
+    "memjs": "0.8.1"
   },
   "devDependencies": {
     "mocha": "*",
