@@ -1,19 +1,28 @@
 {
-  "name": "YOUR-PROJECT-NAME-HERE",
-  "description": "YOUR PROJECT DESCRIPTION HERE",
-  "author": "YOUR NAME <your@emailaddress.com>",
+  "name": "cacher-memjs",
+  "description": "A pluggable backend for Cacher that uses memjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/actuosus/cacher-memjs.git"
+  },
+  "author": "Arthur Chafonov <actuosus@gmail.com>",
   "version": "0.0.1",
+  "license": "MIT",
   "dependencies": {
-    "connect": "1.8.5",
-    "express": "2.5.2",
-    "jade": "0.20.0",
-    "mongoose": "2.4.8",
-    "socket.io": "0.8.7"
+    "cacher": "1.8.5",
+    "memjs": "2.5.2"
   },
   "devDependencies": {
-    "vows": "0.5.x",
-	"mocha": "*",
-	"should": "*"
+    "mocha": "*",
+    "should": "*"
   },
-  "engine": "node >= 0.6.6"
+  "readmeFilename": "README.md",
+  "engine": "node >= 0.6.6",
+  "bugs": {
+    "url": "https://github.com/actuosus/cacher-memjs/issues"
+  }
 }
