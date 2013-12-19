@@ -13,7 +13,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
-    "cacher": "1.8.5",
+    "cacher": "1.0.1",
     "memjs": "2.5.2"
   },
   "devDependencies": {
